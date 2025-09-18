@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaviSmart AI Opportunity Search PoC</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="header-bar">
+        <h1 class="brand-title">NaviSmart AI · Opportunity Search</h1>
+      </section>
+
+      <section class="controls-panel">
+        <form class="query-form" id="query-form">
+          <input id="query-input" class="query-input" type="text" placeholder="Describe the opportunity you want to find..." required />
+          <button class="submit-button" type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="stream-layout">
+        <div class="progress-stream" id="progress-stream">
+          <div class="stream-header">
+            <span>Live progress</span>
+            <span class="loading-indicator" id="loading-indicator" aria-live="polite" aria-busy="false"></span>
+          </div>
+          <div class="stream-body" id="stream-body"></div>
+        </div>
+        <div class="results-panel" id="results-panel">
+          <div class="results-header">
+            <div class="results-title">Results</div>
+            <div class="results-toolbar" role="toolbar" aria-label="Results actions">
+              <label class="select-all">
+                <input type="checkbox" id="select-all" />
+                <span>Select all</span>
+              </label>
+              <button class="toolbar-button" id="apply-selected" type="button">Apply to selected</button>
+              <button class="toolbar-button" id="save-selected" type="button">Save selected</button>
+              <button class="toolbar-button" id="download-csv" type="button">Download CSV</button>
+              <label class="filter-saved">
+                <input type="checkbox" id="filter-saved" />
+                <span>Show saved only</span>
+              </label>
+            </div>
+          </div>
+          <div class="results-body" id="results-body"></div>
+          <div class="results-footer" id="results-footer" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
