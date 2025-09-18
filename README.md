@@ -99,7 +99,4 @@ uvicorn src.backend.main:app --reload --port 8000
 - Swap models or plug additional research APIs by adding more APIChain nodes
 - Add filters (region, industry) to the query form and pass through state
 
-## Security
 
-- Do not commit real API keys. Use .env locally.
-- The backend injects keys as headers in requests via RequestsWrapper.
